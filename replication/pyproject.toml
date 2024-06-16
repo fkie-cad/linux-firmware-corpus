@@ -1,0 +1,32 @@
+# SPDX-FileCopyrightText: 2024 Fraunhofer FKIE
+# SPDX-FileContributor: Marten Ringwelski <git@maringuu.de>
+#
+# SPDX-License-Identifier: GPL-3.0-or-later
+
+[tool.poetry]
+name = "replicate-lfwc"
+version = "0.1.0"
+description = ""
+authors = ["Marten Ringwelski <git@maringuu.de>"]
+readme = "README.md"
+license = "GPL-3.0-or-later"
+
+[tool.poetry.scripts]
+replicate-lfwc = 'replicate_lfwc.__main__:cli'
+
+[tool.poetry.dependencies]
+python = "^3.10"
+click = "^8.1.7"
+pandas = "^2.2.1"
+requests = "^2.31.0"
+attrs = "^23.2.0"
+
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.3.2"
+pre-commit = "^3.7.0"
+reuse = "^3.0.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

@@ -1,0 +1,2 @@
+id,manufacturer,device_name,firmware_version,release_date,device_class,filename,source_type,source_link,files_in_firmware,compressed_firmware_size,firmware_mime,top_level_unpacker,md5,sha1,sha256,sha512,ssdeep,tlsh,elf_architectures,linux_banners,wayback
+0,manufacturer,device,1.0,1970-01-01,corpus,lfwc.zip,github,https://zenodo.org/TODO,3,TODO_SIZE,application/zip,7z,TODO_md5,TODO_sha1,TODO_sha256,TODO_sha512,TODO_ssdeep,TODO_tlsh,mips|arm|esp|m68k|ppc|riscv|s/390|SPARC|x86,Linux kernel version 1.0 - 5.4,https://archive.org/TODO_WAYBACK_LINK

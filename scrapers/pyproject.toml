@@ -1,0 +1,23 @@
+[project]
+name = "lfwc_scraper"
+authors = [
+    {name = "René Helmke", email = "rene.helmke@fkie.fraunhofer.de"}
+]
+readme = "README.md"
+requires-python = ">=3.12"
+license = {file = "LICENSE"}
+version = "0.1.0"
+
+dependencies = [
+    "scrapy==2.11.2",
+    "selenium==4.21.0",
+    "webdriver-manager==4.0.1",
+]
+
+[tool.setuptools]
+py-modules = []
+
+[tool.black]
+line-length = 119
+target-version = ["py312"]
+include = "firmware"
