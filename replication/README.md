@@ -1,25 +1,24 @@
-# replicate\_lfwc
+# replication
 
 This folder contains a replication tool for LFwC.
 
-It contains three functionalities:
+It contains two functionalities:
  * A leightweight wrapper around [aria2][aria2] to download the firmware corpus
  * An upload script to pass firmware to [FACT][fact]
- * A vagrant file to deploy a working FACT instance using VirtualBox
 
-The paper describes three files containing firmware meta data for replication:
+The paper describes two files containing firmware meta data for replication:
 
-- `lfwc.csv` - 10,913 fully unpackable linux firmware images
-- lfwc-failed.csv - 3,670 firmware images that failed unpacking verification
+- `lfwc-full.csv` - 10,913 fully unpackable linux firmware images
+- `lfwc-failed.csv` - 3,670 firmware images that failed unpacking verification
 
-These files work in conjunction with the tool, **but are not part of this repository**.
+These files work in conjunction with the tool, **but are not part of this repository**. Please request the corpus meta data via Zenodo.
 
 ## Installation
 
 First, install the system dependencies:
 
-- aria2: Required for the `download` command (version 1.37.0 at the time of writing)
-- [FACT][fact] v4.1.1: Required for the `upload-to-fact` command (See Section FACT Vagrant Image).
+- [aria2][aria2]: Required for the `download` command (version 1.37.0 at the time of writing)
+- [FACT][fact]: Required for the `upload-to-fact` command (See Section FACT Vagrant Image).
 
 The tool can be installed with `pip` after packaging it with [`poetry`][poetry].
 In short, use the folowing two lines of shell:
@@ -28,12 +27,6 @@ In short, use the folowing two lines of shell:
 $ poetry build
 $ pip install dist/replicate_lfwc-0.1.0.tar.gz
 ```
-
-### FACT Vagrant Image
-
-We provide an easily accessible, non-invasive way to install FACT using Vagrant.
-
-See the [Vagrantfile][./Vagrantfile] for configuration options.
 
 ## Usage
 After installing as described above, the script is exposed as

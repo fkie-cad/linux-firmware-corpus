@@ -1,0 +1,5 @@
+#!/bin/bash
+
+source "./.venv/bin/activate"
+scrapy crawl $1 -o "$1".json
+deactivate

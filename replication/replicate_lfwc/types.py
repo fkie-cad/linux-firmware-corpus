@@ -72,8 +72,7 @@ class FirmwareImageStatus(str, enum.Enum):
 
         image_path = corpus.image_path(image)
 
-        with image_path.open("rb") as f:
-            downloaded_sha256 = hashlib.file_digest(f, "sha256").hexdigest()
+        downloaded_sha256 = hashlib.sha256(image_path.read_bytes()).hexdigest()
 
         return image.sha256 != downloaded_sha256
 

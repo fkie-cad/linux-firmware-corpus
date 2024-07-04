@@ -42,9 +42,9 @@ class FirmwareDownloaderMiddleware(object):
 
     def __init__(self):
         options = webdriver.FirefoxOptions()
+        options.add_argument("--headless")
         service = Service(GeckoDriverManager().install())
         driver_cls = webdriver.Firefox
-        options.headless = True  # pyright: ignore
         self.driver = driver_cls(options=options, service=service)  # pyright:ignore
         self.wait = WebDriverWait(self.driver, 15)
 

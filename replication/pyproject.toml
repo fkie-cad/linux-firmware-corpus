@@ -15,6 +15,7 @@ license = "GPL-3.0-or-later"
 replicate-lfwc = 'replicate_lfwc.__main__:cli'
 
 [tool.poetry.dependencies]
+scrapy = "^2.11.2"
 python = "^3.10"
 click = "^8.1.7"
 pandas = "^2.2.1"

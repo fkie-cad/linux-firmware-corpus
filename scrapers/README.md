@@ -1,6 +1,6 @@
+# scrapers
 
-# lfwc_scraper
-This subfolder archives all scrapers used to obtain the raw samples from all 10 vendors included in lfwc:
+This subfolder archives all scrapers used to obtain the raw samples from all 10 vendors included in LFwC:
 
 1.  [ASUS](https://www.asus.com)
 2.  [AVM](https://avm.de)

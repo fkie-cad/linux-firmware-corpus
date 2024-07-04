@@ -1,0 +1,7 @@
+#!/bin/bash
+
+python3 -m venv .venv
+source .venv/bin/activate
+
+sudo apt update && sudo apt install texlive-full -y
+pip install -r requirements.txt

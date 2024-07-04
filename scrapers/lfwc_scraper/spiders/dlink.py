@@ -11,7 +11,7 @@ from lfwc_scraper.items import FirmwareItem
 class DLink(FirmwareSpider):
     handle_httpstatus_list = [404]
     name = "dlink"
-    allowed_domains = ["eu.dlink.com", "ftp.dlink.de"]
+    allowed_domains = ["eu.dlink.com", "ftp.dlink.de", "www.dlink.com"]
 
     start_urls = [
         "https://eu.dlink.com/de/de/for-home/wifi?page=-1&mode=ajax&filters=&categories=&target=products",

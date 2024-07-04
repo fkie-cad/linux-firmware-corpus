@@ -1,0 +1,8 @@
+#!/bin/bash
+
+root=$(pwd)
+
+cd "${root}/replication" && ./prepare
+cd "${root}/scrapers" && ./prepare
+cd "${root}/notebooks" && ./prepare
+cd "${root}/downscaling" && ./prepare
