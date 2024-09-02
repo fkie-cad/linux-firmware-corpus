@@ -89,9 +89,6 @@ def aria2c_options_from_firmware_image(image):
 @click.pass_context
 def cli(click_ctx, corpus_csv: pl.Path):
     """Use aria2 to download LFWC"""
-    # This tool's only reason d'être is that I think the aria2 cli tool lacks some functionality:
-    # * Checking hashes without trying to connect with the server
-    # * Generating machine readable output
     click_ctx.ensure_object(dict)
     corpus_df = opinionated_dataframe_from_csv(corpus_csv)
     click_ctx.obj["corpus-df"] = corpus_df
@@ -328,8 +325,6 @@ def dump_aria2_input(click_ctx):
     help="A list of analysis plugins that should be analyzed on the given images.",
     type=click.Choice([plugin.value for plugin in fact.Plugin]),
     multiple=True,
-    # XXX This works once [1] is merged.
-    # [1]: https://github.com/pallets/click/pull/2365
     show_choices=False,
     prompt=False,
 )
@@ -353,15 +348,7 @@ def upload_to_fact(click_ctx, corpus_dir: pl.Path, url, plugins: list[str]):
         )
 
     POLL_INTERVAL = 5
-    # Actually there is little to no benefit in allowing concurrent analysis,
-    # as this changes nothing for FACT but makes it more error prone.
-    # Also, this does not even work correctly, as FACT incorrectly reports the
-    # running analysis on the /rest/status endpoint.
-    # Anyways, it kind of works, so thats enough for now.
     MAX_CONCURRENT_ANALYSIS = 1
-    # Turns out analyses are not directly available after uploading
-    # (which is a bug in FACT, but anyways..)
-    # So this general timeout accounts for slowness in FACT.
     GIVE_FACT_A_REST = 7
     # Sometimes analyses can get stuck as reported by various issues in FACT:
     # https://github.com/fkie-cad/FACT_core/issues/1206
@@ -416,7 +403,6 @@ def upload_to_fact(click_ctx, corpus_dir: pl.Path, url, plugins: list[str]):
         except fact.UploadFailedError:
             click.echo("Uploading failed.", err=True)
 
-        # Sleep tight :)
         time.sleep(GIVE_FACT_A_REST)
 
     click.echo(f"Uploaded: {uploaded_count}")

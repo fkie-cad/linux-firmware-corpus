@@ -90,12 +90,10 @@ class UnknownStatusError(FactError):
 
 
 def hash_from_uid(uid: str):
-    # See uid_from_image
     return uid.split("_")[0]
 
 
 def uid_from_image(image: FirmwareImage):
-    # Dunno if this is documented, but this is how FACT generates its uid's
     return f"{image.sha256}_{image.size}"
 
 
@@ -131,16 +129,12 @@ def upload(image: FirmwareImage, plugins: list[str], ctx: Context) -> str:
     except requests.HTTPError as e:
         raise UploadFailedError() from e
     answer = r.json()
-    # Funny, this is undocumented I think.
     return answer["uid"]
 
 
 def firmware_is_uploaded(image: FirmwareImage, ctx: Context) -> bool:
-    # Thanks to bad api design we cannot query this in a bulk request,
-    # but rather have to make request this for each firmware we are interested in
     r = requests.get(ctx.url + f"/rest/firmware/{uid_from_image(image)}")
 
-    # XXX This ignores other errors
     return r.status_code == 200  # noqa: PLR2004
 
 
