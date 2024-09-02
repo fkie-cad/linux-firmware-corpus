@@ -1,6 +1,6 @@
 # Linux Firmware Corpus (LFwC)
 
-This is the companion and artifact repository to the paper `Unpacked, Analyzed, and Improved: Sound Firmware Corpora for Vulnerability Research`.
+This is the companion and artifact repository to the paper `Mens Sana in Corpore Sano: Sound Firmware Corpora for Vulnerability Research`.
 
 In Sec. V of the paper, be build a proof of concept Linux Firmware Corpus (LFwC) to assess the feasibility of our requirements for scientifically sound firmware corpora (Sec. III).
 It is based on data until June 2023 and consists of 10,913 deduplicated and unpacked firmware images from ten known manufacturers.
@@ -11,7 +11,7 @@ We tear down the firmware unpacking barrier with an open source process for veri
 
 ## Read & Cite the Paper
 
-The paper was published at TBA and can be downloaded [here](#).
+The paper was accepted at the [Network and Distributed System Security (NDSS) Symposium 2025](https://www.ndss-symposium.org/ndss2025/) and can be downloaded [here](#).
 
 ```bibtex
 TBA
