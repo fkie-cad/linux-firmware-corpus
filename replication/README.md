@@ -20,12 +20,10 @@ First, install the system dependencies:
 - [aria2][aria2]: Required for the `download` command (version 1.37.0 at the time of writing)
 - [FACT][fact]: Required for the `upload-to-fact` command (See Section FACT Vagrant Image).
 
-The tool can be installed with `pip` after packaging it with [`poetry`][poetry].
-In short, use the folowing two lines of shell:
+The tool can be installed with `pip`.
 
 ```sh
-$ poetry build
-$ pip install dist/replicate_lfwc-0.1.0.tar.gz
+$ pip install .
 ```
 
 ## Usage
