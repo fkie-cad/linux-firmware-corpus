@@ -17,20 +17,6 @@ The paper was accepted at the [Network and Distributed System Security (NDSS) Sy
 TBA
 ```
 
-## Cite the Corpus
-
-```bibtex
-@software{helmke_2024_12659339,
-  author       = {Helmke, René and Padilla, Elmar and Aschenbruck, Nils},
-  title        = {Linux Firmware Corpus - Repository Snapshot},
-  month        = jul,
-  year         = 2024,
-  doi          = {10.5281/zenodo.12659339},
-  publisher    = {Fraunhofer FKIE},
-  url          = {https://doi.org/10.5281/zenodo.12659339}
-}
-```
-
 ## Get the Corpus
 
 Access to LFwC is gated for scientific purposes. Please request the meta data for corpus replication [here](https://doi.org/10.5281/zenodo.12659436).
