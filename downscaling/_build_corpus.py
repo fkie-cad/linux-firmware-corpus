@@ -10,8 +10,7 @@ def parse_args():
     parser = argparse.ArgumentParser("build_corpus")
     parser.add_argument(
         "--full_corpus",
-        default=Path("../../notebooks/public_data/lfwc-full.csv"),
-        required=False,
+        required=True,
         type=Path,
         help="path to full corpus csv",
     )
