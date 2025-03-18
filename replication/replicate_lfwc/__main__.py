@@ -53,12 +53,15 @@ def opinionated_dataframe_from_csv(csv_path: pl.Path):
         },
     ).copy()
 
-    df["filename"] = df["filename"].apply(urllib.parse.unquote)
+    df["filename"] = df["filename"].astype(str).apply(urllib.parse.unquote)
     df["release"] = df["release"].apply(
         lambda release: None if release == "1970-01-01" else release
     )
     df["host"] = (
-        df["url"].apply(urllib.parse.urlparse).apply(lambda parsed: parsed.netloc)
+        df["url"]
+        .astype(str)
+        .apply(urllib.parse.urlparse)
+        .apply(lambda parsed: parsed.netloc)
     )
 
     return df
