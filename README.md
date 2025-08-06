@@ -74,7 +74,7 @@ The host requirements are:
 |---------------:|:----------------------------------------:|
 | CPU            | 4 Free CPU Cores with VT-x or AMD-v      |
 | RAM            | 16 GiB                                   |
-| Storage        | 100 GiB (Preferablly SSD)                |
+| Storage        | 100 GiB (Preferably SSD)                 |
 | Host OS        | Arbitrary Desktop Linux (x86\_64)        |
 | VirtualBox     | `>=7.0`                                  |
 | Vagrant        | `~2.4` (verified)                        |
