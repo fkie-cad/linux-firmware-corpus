@@ -27,8 +27,8 @@ The paper was published at the [Network and Distributed System Security (NDSS) S
 
 ## Get the Corpus
 
-Access to LFwC is gated for scientific purposes. Please request the meta data for corpus replication [here](https://doi.org/10.5281/zenodo.12659436).
-
+Access to LFwC is gated for scientific purposes. Request the meta data for corpus replication [here](https://doi.org/10.5281/zenodo.12659436).
+As per our ethical discussion in the paper, please state your academic affiliation, position, and roughly explain to us how you want to use the corpus in your research.
 
 ## Corpus Updates
 
